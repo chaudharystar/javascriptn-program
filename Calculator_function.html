@@ -12,8 +12,19 @@
         
         let array=['3','+','7','*','5'];
         function calculator(array) {
-            console.log(array);
-            for(let i=0;i<array.length;i++) {
+            let length=array.length;
+            // console.log(array);
+              if(array[0]==="+" || array[0]==="-" || array[0]==="*" || array[0]==="/" )
+              {
+                  console.log("Invalid Expression");
+              }
+              else if(array[length-1]==="+" || array[length-1]==="-" || array[length-1]==="*" || array[length-1]==="/" )
+              {
+                  console.log("Invalid Expression");
+              }
+             
+            else {
+                for(let i=0;i<length;i++) {
                 if(array[i]==='+') {
                     array[i+1]=Number(array[i-1])+Number(array[i+1]);
                 }
@@ -30,8 +41,10 @@
                     array[i+1]=Number(array[i-1])%Number(array[i+1]);
                 }
             }
-            console.log(array[array.length-1]);
-            console.log(array);
+            console.log(array[length-1]);
+            // console.log(array);
+            }
+            
              return;
             
 
