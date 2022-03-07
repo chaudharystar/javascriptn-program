@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">first</div>
+    <div class="container">second</div>
+    <div class="container">third</div>
+    <div class="container">fourth</div>
+    <div class="container">five</div>
+    <h1 id="h1">heading1</h1>
+    <h1 id="h2">heading2</h1>
+    <div class="a">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+    </div>
+    <script>
+        let x = document.querySelectorAll(".a button");
+        console.log(x);
+        let arr=[];
+        for(const a of x)
+        {
+            console.log(a);
+            a.addEventListener('click' ,function (){
+                console.log(a.innerHTML);
+                arr.push(a.innerHTML);
+            })
+        }
+        console.log(arr);
+    </script>
+    
+</body>
+</html>
